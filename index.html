@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>circles</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/default.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+</head>
+<body>
+
+    <div style="position: fixed; padding: 1em; z-index: 1000;" class="zoom-ui">
+        <button class="btn btn-sm btn-outline-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="menu_button" type="button">
+            <i class="fa fa-cog"></i>
+            <div class="dropdown-menu" aria-labelledby="menu_button">
+                <a class="dropdown-item" id="reset_button">
+                    <i class="fa fa-undo"></i>&nbsp;&nbsp;Reset Level
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" id="back_button">
+                    <i class="fa fa-sign-out-alt"></i>&nbsp;&nbsp;Quit
+                </a>
+            </div>
+        </button>
+    </div>
+
+    <div style="position: fixed; top: 0; right: 0; padding: 1em;" class="zoom-ui">
+        <button class="btn btn-sm btn-outline-dark" id="info_button" type="button" disabled>
+            LEVEL: 1&nbsp;&nbsp;-&nbsp;&nbsp;MOVES: 12 
+        </button>
+    </div>
+
+    <div style="position: fixed; bottom: 25vh; width: 100%">
+        <div style="margin: 0 auto" class="zoom-ui zoom-start-button-div">
+            <div class="btn-group btn-block" id="start_button_group">
+                <button type="button" class="btn btn-outline-dark btn-block" data-level-offset="1" id="start_button">
+                    START GAME - EASY
+                </button>
+                <button type="button" class="btn btn-outline-dark dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item start-option" data-level-offset="1">Easy</a>
+                    <a class="dropdown-item start-option" data-level-offset="10">Medium</a>
+                    <a class="dropdown-item start-option" data-level-offset="20">Hard</a>
+                    <a class="dropdown-item start-option" data-level-offset="50">EX</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="position: fixed; bottom: 0; padding: 0.5em; width: 100%">
+        <div style="width: 50%; margin: 0 auto" class="zoom-ui">
+            <center>Manny Najera | 2018</center>
+        </div>
+    </div>
+    
+    <canvas id="mainCanvas"></canvas>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
+    <script src="https://code.createjs.com/1.0.0/easeljs.min.js"></script>
+    <script src="https://code.createjs.com/1.0.0/tweenjs.min.js"></script>
+    <script src="js/lginfo.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

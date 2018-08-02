@@ -1,0 +1,31 @@
+﻿body {
+  margin: 0px;
+  overflow: hidden;
+}
+
+.zoom-start-button-div {
+  width: 30%;
+ }
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3)
+and (orientation : portrait) {
+  .zoom-ui {
+  	zoom: 1;
+  }
+  .zoom-start-button-div {
+  	width: 60%;
+  }
+}
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3)
+and (orientation : landscape) {
+  .zoom-ui {
+  	zoom: 1;
+  }
+}
